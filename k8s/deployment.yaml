@@ -17,8 +17,8 @@ spec:
       spec: 
         containers: 
         - name: lizon-site
-          image: lizonraj/lizon-swe645-hw2:latest
-          imagePullPolicy: Always
+          image: lizonraj/lizon-swe645-hw2:v0.1.1
+          imagePullPolicy: IfNotPresent
           ports:
           - containerPort: 80
           readinessProbe:
