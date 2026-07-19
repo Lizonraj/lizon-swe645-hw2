@@ -231,8 +231,8 @@ An AWS Budget alert at $10/month is armed on the deployment account to catch acc
 
 ## Documentation and video
 
-- **Detailed writeup:** `docs/SWE645-HW2-Documentation.pdf`
-- **Narrated demo video:** included in submission package (or linked from documentation PDF)
+- **Detailed writeup:** [`docs/SWE645-HW2-Documentation.pdf`](docs/SWE645-HW2-Documentation.pdf)
+- **Narrated demo video:** [`docs/Final Demo Recording.mov`](docs/Final%20Demo%20Recording.mov) — walkthrough of the repo, live EKS deployment, self-healing test, Jenkins pipeline, and an end-to-end `git push` → automated deploy → visible browser update
 - **Grading URL:** the current live ELB URL is documented in the PDF and shown in the video; per the assignment, the application does not need to be live for grading.
 
 ---
