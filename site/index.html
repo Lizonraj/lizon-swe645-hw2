@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--
+  Index.html
+  Personal homepage for Lizon Raj - a short intro, background, and skills.
+  Serves as the landing page and links to the prospective student survey.
+  Part of SWE 645 Assignment 2.
+-->
+<html>
+<head>
+<title>Lizon</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+</head>
+<body class="w3-black">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="/images/Lizon_Image.jpg" style="width:100%">
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="survey.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>Survey</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="index.html" class="w3-bar-item w3-button" style="width:50% !important">HOME</a>
+    <a href="survey.html" class="w3-bar-item w3-button" style="width:50% !important">Survey</a>
+  </div>
+</div>
+
+<!-- Page Content -->
+<div class="w3-padding-medium" id="main">
+  <!-- Header/Home -->
+  <header class="w3-container w3-padding-20 w3-center w3-black" id="home">
+    <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Lizon Raj.</h1>
+    <p>Graduate Student and Software Engineering Manager</p>
+    <img src="/images/Lizon_Image.jpg" alt="boy" class="w3-image" width="400" height="500">
+  </header>
+  <!-- About Section -->
+  <div class="w3-content w3-justify w3-text-grey w3-padding-30" id="about">
+    <p>I currently work as a Software Engineering Manager at my company, where I lead a team responsible for building scalable backend applications and cloud-based systems.
+    I have around twelve years of experience in software development, with my strongest expertise in backend programming using C#/.NET and database technologies such as SQL and PostgreSQL. While most of my focus has been on backend systems, I do have some exposure to web programming, particularly building REST APIs that power web and mobile applications. I have also worked with frontend teams and gained basic experience in HTML, JavaScript, and frameworks like Angular.
+    From this class, I hope to broaden my understanding of web development concepts beyond just backend services. I want to gain more confidence in the full stack, especially the fundamentals of creating well-structured, user-friendly web applications. My goal is to connect my backend expertise with a stronger understanding of web programming so I can better support my team and continue to grow as a technology leader.
+  </p>    
+  <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
+    <p class="w3-wide">.Net</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
+    </div>
+    <p class="w3-wide">Sql</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide">AWS Cloud</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
+    </div><br>    
+    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">11+</span><br>
+        Experience
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">10+</span><br>
+        Projects Done
+      </div>
+    </div>
+    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-download"></i> Download Resume
+    </button>     
+    <!-- End Grid/Pricing tables -->
+    </div>    
+  <!-- End About Section -->
+  </div>  
+    <!-- Footer -->
+  <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+      <!-- End footer -->
+  </footer>
+<!-- END PAGE CONTENT -->
+</div>
+</body>
+</html>

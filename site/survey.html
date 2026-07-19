@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--
+  Survey.html
+  Prospective Student Survey for George Mason University.
+  Collects basic contact info, what the visitor liked about campus, how they
+  heard about GMU, a raffle entry, and an overall recommendation rating.
+  Part of SWE 645 Assignment 2 by Lizon Raj.
+-->
+<html>
+<head>
+<title>Survey</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+h1 {
+      color: #006633;
+    }
+.spaced-div {
+      margin-top: 20px; /* Space above */
+      margin-bottom: 20px; /* Space below */
+    } .gmu-box {
+      border: 5px solid #006633;
+      box-shadow: 0 4px 16px rgba(0,102,51,0.15), 0 1.5px 8px #FFCC33;
+      background: #fff;
+      padding: 32px 24px;
+      margin: 32px auto 24px auto;
+      border-radius: 12px;
+      max-width: 700px;
+      text-align: left;
+    }
+    .gmu-highlight {
+      background: #FFCC33;
+      color: #006633;
+      font-weight: bold;
+      padding: 4px 10px;
+      border-radius: 6px;
+      display: inline-block;
+    }
+</style>
+</head>
+<body class="w3-black">
+    <!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Avatar image in top left corner -->
+  <img src="/images/Lizon_Image.jpg" style="width:100%">
+  <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="survey.html" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>Survey</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="index.html" class="w3-bar-item w3-button" style="width:50% !important">HOME</a>
+    <a href="survey.html" class="w3-bar-item w3-button" style="width:50% !important">Survey</a>
+  </div>
+</div>
+  <!-- Survey Form -->
+<form autocomplete="on" style="max-width:600px;margin:auto;" action="#" method="post">
+     <h2 class="w3-text-light-grey"> <img src="/images/gmu.png" alt="George Mason University"></h2>
+    <hr style="width:200px" class="w3-opacity">
+  <h1 class="gmu-box">Prospective Student Survey:</h1>
+  <div class="spaced-div">
+    <label for="firstname">First Name: <span style="color:red">*</span></label>
+    <input type="text" id="firstname" name="firstname" required autofocus placeholder="Enter your first name">
+  </div>
+  <div class="spaced-div">
+    <label for="lastname">Last Name: <span style="color:red">*</span></label>
+    <input type="text" id="lastname" name="lastname" required placeholder="Enter your last name">
+  </div>
+  <div class="spaced-div">
+    <label for="street">Street Address: <span style="color:red">*</span></label>
+    <input type="text" id="street" name="street" required placeholder="123 Main St">
+  </div>
+  <div class="spaced-div">
+    <label for="city">City: <span style="color:red">*</span></label>
+    <input type="text" id="city" name="city" required placeholder="City">
+  </div>
+  <div class="spaced-div">
+    <label for="state">State: <span style="color:red">*</span></label>
+    <input type="text" id="state" name="state" required placeholder="State">
+  </div>
+  <div class="spaced-div">
+    <label for="zip">Zip: <span style="color:red">*</span></label>
+    <input type="text" id="zip" name="zip" required pattern="\d{5}" placeholder="12345">
+  </div>
+  <div class="spaced-div">
+    <label for="telephone">Telephone: <span style="color:red">*</span></label>
+    <input type="tel" id="telephone" name="telephone" required placeholder="(555) 555-5555">
+  </div>
+  <div class="spaced-div">
+    <label for="email">E-mail: <span style="color:red">*</span></label>
+    <input type="email" id="email" name="email" required placeholder="example@email.com">
+  </div>
+  <div class="spaced-div">
+    <label for="url">URL:</label>
+    <input type="url" id="url" name="url" placeholder="https://example.com">
+  </div>
+  <div class="spaced-div">
+    <label for="surveydate">Date of Survey: <span style="color:red">*</span></label>
+    <input type="date" id="surveydate" name="surveydate" required placeholder="MM/DD/YYYY">
+  </div>
+  <div class="spaced-div">
+    <label for="gradmonth">High School Graduation Month: <span style="color:red">*</span></label>
+    <input list="months" id="gradmonth" name="gradmonth" required placeholder="Select month">
+    <datalist id="months">
+      <option value="January">
+      <option value="February">
+      <option value="March">
+      <option value="April">
+      <option value="May">
+      <option value="June">
+      <option value="July">
+      <option value="August">
+      <option value="September">
+      <option value="October">
+      <option value="November">
+      <option value="December">
+    </datalist>
+    <input type="text" id="gradyear" name="gradyear" required pattern="\d{4}" placeholder="Year (e.g., 2025)">
+  </div>
+  <div class="spaced-div">
+    <label>What did you like most about the campus? <span style="color:red">*</span></label><br>
+    <input type="checkbox" id="students" name="liked[]" value="students">
+    <label for="students">Students</label>
+    <input type="checkbox" id="location" name="liked[]" value="location">
+    <label for="location">Location</label>
+    <input type="checkbox" id="campus" name="liked[]" value="campus">
+    <label for="campus">Campus</label>
+    <input type="checkbox" id="atmosphere" name="liked[]" value="atmosphere">
+    <label for="atmosphere">Atmosphere</label>
+    <input type="checkbox" id="dorm" name="liked[]" value="dorm rooms">
+    <label for="dorm">Dorm Rooms</label>
+    <input type="checkbox" id="sports" name="liked[]" value="sports">
+    <label for="sports">Sports</label>
+  </div>
+  <div class="spaced-div">
+    <label>How did you become interested in the university? <span style="color:red">*</span></label><br>
+    <input type="radio" id="friends" name="interest" value="friends" required>
+    <label for="friends">Friends</label>
+    <input type="radio" id="television" name="interest" value="television">
+    <label for="television">Television</label>
+    <input type="radio" id="internet" name="interest" value="internet">
+    <label for="internet">Internet</label>
+    <input type="radio" id="other" name="interest" value="other">
+    <label for="other">Other</label>
+  </div>
+  <div class="spaced-div">
+    <label for="raffle">Raffle (enter at least 10 comma-separated numbers, 1-100): <span style="color:red">*</span></label><br>
+    <input type="text" id="raffle" name="raffle" required
+           pattern="^\s*(100|[1-9][0-9]?)(\s*,\s*(100|[1-9][0-9]?)){9,}\s*$"
+           title="Enter at least 10 comma-separated numbers between 1 and 100"
+           placeholder="e.g., 5, 12, 33, 47, 58, 61, 74, 80, 92, 99"
+           style="width:100%">
+  </div>
+  <div class="spaced-div">
+    <label for="comments">Additional Comments:</label><br>
+    <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter any additional comments here..."></textarea>
+  </div>
+  <div class="spaced-div">
+    <label for="recommend">Likelihood of recommending this school: <span style="color:red">*</span></label>
+    <select id="recommend" name="recommend" required>
+      <option value="">Select...</option>
+      <option value="Very Likely">Very Likely</option>
+      <option value="Likely">Likely</option>
+      <option value="Unlikely">Unlikely</option>
+    </select>
+  </div>
+  <button type="submit" style="color:blue">Submit Survey</button>
+  <button type="reset" style="color:red">Cancel</button>
+  <div><br></div>
+
+  <div class="gmu-highlight mt-4">George Mason University - Department of Computer Science</div>
+</form>
+<!-- End Survey Form -->
+</body>
+</html>

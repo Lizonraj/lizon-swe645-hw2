@@ -1,0 +1,15 @@
+# service.yaml — Kubernetes service configuration for the Lizon site. Written by Lizon Raj for SWE 645. Assignment 2.
+apiVersion: v1
+kind: Service
+metadata: 
+  name: lizon-site-svc
+  labels: 
+    app: lizon-site
+spec:
+  type: LoadBalancer
+  selector:
+    app: lizon-site
+  ports:
+  - port: 80
+    targetPort: 80
+    protocol: TCP

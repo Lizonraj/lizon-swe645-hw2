@@ -1,0 +1,42 @@
+# deployment.yaml — Kubernetes deployment configuration for the Lizon site. Written by Lizon Raj for SWE 645. Assignment 2.
+apiVersion: apps/v1 
+kind: Deployment
+metadata: 
+    name: lizon-site
+    labels:
+      app: lizon-site
+spec:
+    replicas: 3
+    selector: 
+      matchLabels:
+        app: lizon-site
+    template:
+      metadata:
+        labels:
+          app: lizon-site
+      spec: 
+        containers: 
+        - name: lizon-site
+          image: lizonraj/lizon-swe645-hw2:latest
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 3
+            periodSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 10
+            periodSeconds: 15
+          resources:
+            requests: 
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              cpu: 200m
+              memory: 128Mi
